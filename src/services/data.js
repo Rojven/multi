@@ -1,0 +1,28 @@
+export const memberFields = [
+    {inputName: 'photo_1', labelText: 'Member Photo 1'},
+    {inputName: 'name_1', labelText: 'Member Name 1'},
+    {inputName: 'position_1', labelText: 'Member Position 1'},
+    {inputName: 'number_1', labelText: 'Member Number 1'},
+    {inputName: 'photo_2', labelText: 'Member Photo 2'},
+    {inputName: 'name_2', labelText: 'Member Name 2'},
+    {inputName: 'position_2', labelText: 'Member Position 2'},
+    {inputName: 'number_2', labelText: 'Member Number 2'},
+    {inputName: 'photo_3', labelText: 'Member Photo 3'},
+    {inputName: 'name_3', labelText: 'Member Name 3'},
+    {inputName: 'position_3', labelText: 'Member Position 3'},
+    {inputName: 'number_3', labelText: 'Member Number 3'},
+]
+export const memberValue = {
+    photo_1: 'https://www.boredpanda.com/blog/wp-content/uploads/2017/11/sexiest-man-alive-years-people-magazine-32-5a157b7d84860__700.jpg',
+    name_1: 'Tommy Wilton',
+    position_1: 'Customer Support',
+    number_1: 't',
+    photo_2: 'https://www.boredpanda.com/blog/wp-content/uploads/2017/11/sexiest-man-alive-years-people-magazine-32-5a157b7d84860__700.jpg',
+    name_2: 'Tommy Wilton',
+    position_2: 'Technical Support',
+    number_2: 't',
+    photo_3: 'https://www.boredpanda.com/blog/wp-content/uploads/2017/11/sexiest-man-alive-years-people-magazine-32-5a157b7d84860__700.jpg',
+    name_3: 'Tommy Wilton',
+    position_3: 'Sale Support',
+    number_3: 't',
+}

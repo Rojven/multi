@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { memberValue } from './services/data';
+import Button from './components/Button';
+import Settings from './components/Settings';
 import './App.css';
 
 function App() {
+
+  const [memberData, setmemberData] = useState(memberValue);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+     <Button {...memberData}/>
+     <Settings memberData={memberData} setmemberData={setmemberData}/>
     </div>
   );
 }
