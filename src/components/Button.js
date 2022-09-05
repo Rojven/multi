@@ -4,9 +4,10 @@ import send_icon from '../assets/icons/send.svg';
 
 const Button = ({ photo_1, name_1, position_1, number_1, photo_2, name_2, position_2, number_2, photo_3, name_3, position_3, number_3 }) => {
 
+    const [onShown, setOnShown] = useState(false);
     const [firstLink, setFirstLink] = useState(false);
     const [secondLink, setSecondLink] = useState(false);
-    const [thirdLink, setThirdLink] = useState(false)
+    const [thirdLink, setThirdLink] = useState(false);
 
     useEffect(() => {
         setFirstLink(false); 
@@ -30,7 +31,7 @@ const Button = ({ photo_1, name_1, position_1, number_1, photo_2, name_2, positi
     ]
     return (
         <>
-            <div className='widget'>
+            <div className='widget' style={{display: `${onShown ? 'block' : 'none'}`}}>
                 <div className='widget__header'>
                     <div className='flex'>
                         <img src={wa_icon} alt="wa_icon" className='widget-button-icon'/>
@@ -60,8 +61,12 @@ const Button = ({ photo_1, name_1, position_1, number_1, photo_2, name_2, positi
                     </ul>
                 </div>
             </div>
-            <button className='widget-button'>
-                <img src={wa_icon} alt="wa_icon" className='widget-button-icon'/>
+            <button className='widget-button' onClick={() => setOnShown(!onShown)}>
+                {onShown ? (
+                    <span style={{fontSize: '33px', color: 'white'}}>&times;</span>
+                ) : (
+                    <img src={wa_icon} alt="wa_icon" className='widget-button-icon'/>
+                )}   
             </button>
         </>
     )
